@@ -3,53 +3,7 @@
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Arguments">
-        <collectionProp name="Arguments.arguments">
-<elementProp name="POD_NAME" elementType="Argument">
-            <stringProp name="Argument.name">POD_NAME</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;POD_NAME&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="ORG_ID" elementType="Argument">
-            <stringProp name="Argument.name">ORG_ID</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;ORG_ID&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="USER_ID" elementType="Argument">
-            <stringProp name="Argument.name">USER_ID</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;USER_ID&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="ORG_NAME" elementType="Argument">
-            <stringProp name="Argument.name">ORG_NAME</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;ORG_NAME&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="POD_TYPE" elementType="Argument">
-            <stringProp name="Argument.name">POD_TYPE</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;POD_TYPE&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="TEST_RUN_ID" elementType="Argument">
-            <stringProp name="Argument.name">TEST_RUN_ID</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;TEST_RUN_ID&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="POD_ID" elementType="Argument">
-            <stringProp name="Argument.name">POD_ID</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;POD_ID&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="TASK_NAME" elementType="Argument">
-            <stringProp name="Argument.name">TASK_NAME</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;TASK_NAME&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="SCRIPT_NAME" elementType="Argument">
-            <stringProp name="Argument.name">SCRIPT_NAME</stringProp>
-            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;SCRIPT_NAME&quot;))}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-</collectionProp>
+        <collectionProp name="Arguments.arguments"/>
       </elementProp>
     </TestPlan>
     <hashTree>
@@ -139,7 +93,7 @@
         </CSVDataSet>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login" enabled="true">
-          <stringProp name="HTTPSampler.domain">fpsgameday2.sfdctest.my.salesforce.com</stringProp>
+          <stringProp name="HTTPSampler.domain">mytestorg1.org.sfdctest.my.salesforce.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/services/Soap/c/51.0</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -181,7 +135,7 @@ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">SOAPAction</stringProp>
-                <stringProp name="Header.value">https://fpsgameday2.sfdctest.my.salesforce.com</stringProp>
+                <stringProp name="Header.value">https://mytestorg1.org.sfdctest.my.salesforce.com</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -221,7 +175,7 @@ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;
         </IfController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Account">
-            <stringProp name="HTTPSampler.domain">fpsgameday2.sfdctest.my.salesforce.com</stringProp>
+            <stringProp name="HTTPSampler.domain">mytestorg1.org.sfdctest.my.salesforce.com</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.path">/services/data/v60.0/sobjects/Account/</stringProp>
@@ -273,7 +227,7 @@ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;
         </IfController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Opportunity " enabled="true">
-            <stringProp name="HTTPSampler.domain">fpsgameday2.sfdctest.my.salesforce.com</stringProp>
+            <stringProp name="HTTPSampler.domain">mytestorg1.org.sfdctest.my.salesforce.com</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.path">/services/data/v60.0/sobjects/Opportunity/</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -325,7 +279,7 @@ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;
         </IfController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Opportunity" enabled="true">
-            <stringProp name="HTTPSampler.domain">fpsgameday2.sfdctest.my.salesforce.com</stringProp>
+            <stringProp name="HTTPSampler.domain">mytestorg1.org.sfdctest.my.salesforce.com</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.path">/services/data/v60.0/sobjects/Opportunity/${opportunity_id}</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -393,6 +347,7 @@ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+        </hashTree>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
