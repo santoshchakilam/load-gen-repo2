@@ -1,0 +1,15 @@
+{
+  "jmeter_version" : "5.6.3",
+  "tasks": [
+    {
+    "task_name": "mobile-traffic",
+    "script_name": "use-case-1.jmx",
+    "user_files": "users1.csv",
+    "data_files": {
+        "account_file" : "accounts.csv",
+        "opportunity_file" : "opportunities.csv",
+        "contact_file" : "contacts.csv"
+      }
+    }
+  ]
+}
